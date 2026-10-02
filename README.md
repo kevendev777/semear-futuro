@@ -86,7 +86,7 @@ Os commits seguem o padrão **Conventional Commits**: `feat:`, `fix:`, `docs:`, 
 
 ## Acessibilidade
 
-Verificado com Lighthouse, navegação somente por teclado e leitor de tela (NVDA). Principais pontos:
+Auditado com axe-core (regras WCAG 2.0/2.1 A e AA, sem violações nas três telas) e testado com navegação somente por teclado. Principais pontos:
 
 - contraste mínimo de 4,5:1 em todo texto (paleta documentada em `css/style.css`);
 - `lang="pt-BR"`, hierarquia de títulos sem saltos, landmarks (`header`, `nav`, `main`, `footer`);
