@@ -63,8 +63,8 @@ body {
   color: var(--cor-texto);
   background: var(--cor-fundo);
   display: grid;
-  grid-template-areas: "header" "main" "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "a11y" "header" "main" "footer";
+  grid-template-rows: auto auto 1fr auto;
   min-height: 100vh;
 }
 .cabecalho { grid-area: header; }
@@ -439,7 +439,7 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--cor-primaria);
 .grafico { position: relative; height: 220px; margin-block: var(--esp-2); }
 
 /* ---------- 13. ACESSIBILIDADE (WCAG 2.1 AA) ---------- */
-.barra-a11y { background: var(--cor-primaria); }
+.barra-a11y { grid-area: a11y; background: var(--cor-primaria); }
 .barra-a11y__conteudo { display: flex; justify-content: flex-end; gap: var(--esp-1); padding-block: 4px; }
 .barra-a11y button {
   min-width: 44px; min-height: 32px; padding: 0 var(--esp-1);
