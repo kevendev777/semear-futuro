@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Semear Futuro</title>
+  <meta name="description" content="Instituto Semear Futuro: educação, alimentação e cidadania para crianças e famílias em Recife (PE).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/vendor/chart.umd.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="pular-link" href="#app">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="marca" href="#/inicio" data-link>
+        <img src="imagens/logo.svg" alt="Logotipo do Instituto Semear Futuro: uma muda de planta brotando" width="40" height="40">
+        Semear Futuro
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+          <span class="menu-toggle__barra"></span><span class="menu-toggle__barra"></span><span class="menu-toggle__barra"></span>
+        </button>
+        <ul class="menu__lista" id="menu-principal">
+          <li><a class="menu__link" href="#/inicio" data-link>Início</a></li>
+          <li class="menu__item--sub">
+            <a class="menu__link" href="#/projetos" data-link>Projetos Sociais ▾</a>
+            <ul class="submenu" aria-label="Projetos">
+              <li><a href="#/projetos#reforco">Reforço Escolar</a></li>
+              <li><a href="#/projetos#oficinas">Oficinas Culturais</a></li>
+              <li><a href="#/projetos#cozinha">Cozinha Solidária</a></li>
+            </ul>
+          </li>
+          <li><a class="menu__link" href="#/cadastro" data-link>Seja Voluntário</a></li>
+          <li><a class="btn btn--secundario" href="#/cadastro">Quero ajudar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1" aria-live="polite">
+    <noscript>
+      <div class="container secao">
+        <p>Esta aplicação usa JavaScript. Acesse a versão estática: <a href="html/inicio.html">Início</a>, <a href="html/projetos.html">Projetos</a>, <a href="html/cadastro.html">Cadastro</a>.</p>
+      </div>
+    </noscript>
+  </main>
+
+  <footer class="rodape">
+    <div class="container grid">
+      <section class="col-12 col-md-4" aria-labelledby="rod-contato">
+        <h2 id="rod-contato">Contato</h2>
+        <address>
+          Instituto Semear Futuro<br>
+          Rua das Mangueiras, 120, Recife/PE — CEP 50000-000<br>
+          Telefone: <a href="tel:+5581999990000">(81) 99999-0000</a><br>
+          E-mail: <a href="mailto:contato@semearfuturo.org.br">contato@semearfuturo.org.br</a>
+        </address>
+      </section>
+      <section class="col-12 col-md-4" aria-labelledby="rod-links">
+        <h2 id="rod-links">Navegação</h2>
+        <p><a href="#/inicio">Início</a><br><a href="#/projetos">Projetos Sociais</a><br><a href="#/cadastro">Seja Voluntário</a></p>
+      </section>
+      <section class="col-12 col-md-4" aria-labelledby="rod-transp">
+        <h2 id="rod-transp">Transparência</h2>
+        <p>Projeto acadêmico. Relatórios anuais disponíveis mediante solicitação.</p>
+      </section>
+    </div>
+    <p class="rodape__copy"><small>&copy; 2026 Instituto Semear Futuro.</small></p>
+  </footer>
+
+  <div class="toast-area" aria-live="polite"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-texto">
+    <div class="modal__caixa">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-texto"></p>
+      <div class="modal__acoes"><button class="btn btn--primario" type="button" data-fechar>Entendi</button></div>
+    </div>
+  </div>
+</body>
+</html>
