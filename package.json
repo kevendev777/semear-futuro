@@ -1,6 +1,6 @@
 {
   "name": "semear-futuro",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Plataforma web do Instituto Semear Futuro (SPA acessível em HTML, CSS e JavaScript).",
   "type": "module",
   "private": true,

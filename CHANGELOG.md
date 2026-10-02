@@ -2,6 +2,10 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [3.0.3] - 2026-10-02
+### Corrigido
+- Na primeira carga a página rolava até o título e escondia o cabeçalho; o foco só é movido nas trocas de tela.
+
 ## [3.0.2] - 2026-10-02
 ### Corrigido
 - Barra de acessibilidade era posicionada no fim da página pelo grid do `body`; agora ocupa a área própria `a11y` no topo.
