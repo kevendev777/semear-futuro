@@ -277,14 +277,15 @@ label.obrigatorio::after { content: " *"; color: var(--cor-erro); }
   outline: none; border-color: var(--cor-primaria);
   box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.25);
 }
-.form__input:not(:placeholder-shown):valid {
+.form:not(.form--js) .form__input:not(:placeholder-shown):valid,
+.form__input.is-valido {
   border-color: var(--cor-sucesso);
   background: var(--cor-fundo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232E7D32' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") right 12px center / 20px no-repeat;
   padding-right: 40px;
 }
-.form__input:not(:placeholder-shown):invalid { border-color: var(--cor-erro); background-color: #FDECEA; }
+.form:not(.form--js) .form__input:not(:placeholder-shown):invalid { border-color: var(--cor-erro); background-color: #FDECEA; }
 .form__erro { display: none; color: var(--cor-erro); font-size: var(--fs-pequeno); }
-.form__input:not(:placeholder-shown):invalid ~ .form__erro { display: block; }
+.form:not(.form--js) .form__input:not(:placeholder-shown):invalid ~ .form__erro { display: block; }
 .form__ajuda { color: var(--cor-texto-suave); font-size: var(--fs-pequeno); }
 input[type="checkbox"], input[type="radio"] { accent-color: var(--cor-primaria); width: 20px; height: 20px; }
 .form__opcao { display: flex; align-items: center; gap: var(--esp-1); }
@@ -416,3 +417,23 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--cor-primaria);
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ---------- 12. ADIÇÕES DA EXPERIÊNCIA III (SPA) ---------- */
+.form__msg-erro { color: var(--cor-erro); font-size: var(--fs-pequeno); min-height: 1.2em; }
+.form__input.is-invalido { border-color: var(--cor-erro); background-color: #FDECEA; }
+.toast--erro { border-left: 6px solid #EF5350; }
+.filtros { display: flex; flex-wrap: wrap; gap: var(--esp-1); margin-bottom: var(--esp-3); }
+.filtro[aria-pressed="true"] { background: var(--cor-primaria); color: #FFF; }
+.lista-voluntarios { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--esp-1); }
+.lista-voluntarios__item {
+  display: flex; justify-content: space-between; align-items: center; gap: var(--esp-1);
+  padding: var(--esp-1) var(--esp-2); background: var(--cor-fundo-alt); border-radius: var(--raio);
+}
+.btn-icone {
+  width: 36px; height: 36px; border: 0; border-radius: 50%; cursor: pointer;
+  background: transparent; color: var(--cor-erro); font-size: var(--fs-md);
+}
+.btn-icone:hover, .btn-icone:focus-visible { background: #FDECEA; }
+[hidden] { display: none !important; }
+#app:focus, h1:focus { outline: none; }
+.grafico { position: relative; height: 220px; margin-block: var(--esp-2); }
