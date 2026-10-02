@@ -7,6 +7,7 @@ import * as storage from './modules/storage.js';
 import { iniciarMenu, iniciarModal, mostrarToast, abrirModal } from './modules/ui.js';
 import { projetos } from './data/projetos.js';
 import { desenharGraficoVoluntarios } from './modules/grafico.js';
+import { iniciarAcessibilidade } from './modules/acessibilidade.js';
 
 // ---------- Tela: início ----------
 function montarInicio(app) {
@@ -126,6 +127,7 @@ registrarRota('/projetos', { titulo: 'Projetos Sociais', render: telaProjetos, a
 registrarRota('/cadastro', { titulo: 'Seja Voluntário', render: telaCadastro, aoMontar: montarCadastro });
 registrarRota('/404', { titulo: 'Página não encontrada', render: tela404 });
 
+iniciarAcessibilidade();
 iniciarMenu();
 iniciarModal();
 iniciarRouter('#app');
