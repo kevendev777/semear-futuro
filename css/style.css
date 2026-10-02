@@ -437,3 +437,41 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--cor-primaria);
 [hidden] { display: none !important; }
 #app:focus, h1:focus { outline: none; }
 .grafico { position: relative; height: 220px; margin-block: var(--esp-2); }
+
+/* ---------- 13. ACESSIBILIDADE (WCAG 2.1 AA) ---------- */
+.barra-a11y { background: var(--cor-primaria); }
+.barra-a11y__conteudo { display: flex; justify-content: flex-end; gap: var(--esp-1); padding-block: 4px; }
+.barra-a11y button {
+  min-width: 44px; min-height: 32px; padding: 0 var(--esp-1);
+  background: transparent; color: #FFF; border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--raio); font-weight: 600; cursor: pointer;
+}
+.barra-a11y button:hover { background: rgba(255, 255, 255, 0.15); }
+.barra-a11y button[aria-pressed="true"] { background: #FFF; color: var(--cor-primaria); }
+.barra-a11y button:focus-visible { outline: 3px solid var(--cor-secundaria); outline-offset: 2px; }
+
+/* foco visível também em campos e links do conteúdo */
+.form__input:focus-visible, .filtro:focus-visible, .btn-icone:focus-visible, .menu__link:focus-visible {
+  outline: 3px solid var(--cor-destaque); outline-offset: 2px;
+}
+.rodape a:focus-visible, .hero .btn:focus-visible { outline-color: var(--cor-secundaria); }
+
+/* Tema de alto contraste: redefine apenas as variáveis do design system */
+.alto-contraste {
+  --cor-primaria: #000000;
+  --cor-primaria-clara: #000000;
+  --cor-secundaria: #FFE500;
+  --cor-secundaria-escura: #FFE500;
+  --cor-destaque: #0000EE;
+  --cor-texto: #000000;
+  --cor-texto-suave: #000000;
+  --cor-fundo: #FFFFFF;
+  --cor-fundo-alt: #FFFFFF;
+  --cor-borda: #000000;
+  --sombra: none;
+  --sombra-forte: none;
+}
+.alto-contraste a { text-decoration: underline; }
+.alto-contraste .hero { background: #000; }
+.alto-contraste .card, .alto-contraste .alerta, .alto-contraste .badge { border: 2px solid #000; }
+.alto-contraste .barra-a11y, .alto-contraste .rodape { background: #000; }
