@@ -228,7 +228,7 @@ button:focus-visible {
 .hero .btn--contorno { color: #FFF; border-color: #FFF; }
 
 .btn--primario:hover   { background: var(--cor-primaria-clara); }
-.btn--secundario:hover { background: var(--cor-secundaria-escura); color: #FFF; }
+.btn--secundario:hover { background: var(--cor-secundaria-escura); color: var(--cor-texto); }
 .btn--contorno:hover   { background: var(--cor-primaria); color: #FFF; }
 .btn:hover   { transform: translateY(-2px); box-shadow: var(--sombra); }
 .btn:active  { transform: translateY(0); box-shadow: none; }
