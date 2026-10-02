@@ -2,6 +2,10 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [3.0.1] - 2026-10-02
+### Corrigido
+- Contraste do botão secundário no estado `:hover` (texto branco sobre `#C17900` ficava abaixo de 4,5:1).
+
 ## [3.0.0] - 2026-10-02
 ### Adicionado
 - Barra de acessibilidade: aumentar/diminuir fonte e tema de alto contraste (preferências salvas).
