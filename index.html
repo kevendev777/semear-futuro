@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instituto Semear Futuro</title>
+  <meta name="theme-color" content="#1B5E20">
   <meta name="description" content="Instituto Semear Futuro: educação, alimentação e cidadania para crianças e famílias em Recife (PE).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -14,6 +15,14 @@
 </head>
 <body>
   <a class="pular-link" href="#app">Pular para o conteúdo</a>
+  <div class="barra-a11y" role="toolbar" aria-label="Opções de acessibilidade">
+    <div class="container barra-a11y__conteudo">
+      <button type="button" data-a11y="diminuir" aria-label="Diminuir tamanho da fonte">A−</button>
+      <button type="button" data-a11y="aumentar" aria-label="Aumentar tamanho da fonte">A+</button>
+      <button type="button" data-a11y="contraste" aria-pressed="false">Alto contraste</button>
+      <span class="visualmente-oculto" id="a11y-status" aria-live="polite"></span>
+    </div>
+  </div>
   <header class="cabecalho">
     <div class="container cabecalho__conteudo">
       <a class="marca" href="#/inicio" data-link>
@@ -27,7 +36,7 @@
         <ul class="menu__lista" id="menu-principal">
           <li><a class="menu__link" href="#/inicio" data-link>Início</a></li>
           <li class="menu__item--sub">
-            <a class="menu__link" href="#/projetos" data-link>Projetos Sociais ▾</a>
+            <a class="menu__link" href="#/projetos" data-link>Projetos Sociais <span aria-hidden="true">▾</span></a>
             <ul class="submenu" aria-label="Projetos">
               <li><a href="#/projetos#reforco">Reforço Escolar</a></li>
               <li><a href="#/projetos#oficinas">Oficinas Culturais</a></li>
