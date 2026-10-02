@@ -1,6 +1,7 @@
 // router.js — navegação SPA baseada em hash (#/rota)
 const rotas = {};
 let app;
+let primeiraCarga = true;
 
 export function registrarRota(caminho, { titulo, render, aoMontar }) {
   rotas[caminho] = { titulo, render, aoMontar };
@@ -32,8 +33,11 @@ export function renderizar() {
   if (rota.aoMontar) rota.aoMontar(app);
 
   // 4) acessibilidade: foco no título da nova tela e rolagem
+  //    (na primeira carga o foco fica no início da página, para o "Pular para o conteúdo")
   const destino = ancora ? document.getElementById(ancora) : app.querySelector('h1');
-  if (destino) {
+  const moverFoco = !primeiraCarga || ancora;
+  primeiraCarga = false;
+  if (destino && moverFoco) {
     destino.setAttribute('tabindex', '-1');
     destino.focus({ preventScroll: true });
     destino.scrollIntoView({ block: 'start' });
