@@ -4,7 +4,7 @@ Plataforma web da ONG **Instituto Semear Futuro** (Recife/PE), que atende crian�
 
 Projeto acadêmico da disciplina **Desenvolvimento Front-End para Web** (Cruzeirodosul Virtual), construído ao longo das Experiências Práticas I a IV.
 
-> **Demonstração:** https://SEU-USUARIO.github.io/semear-futuro/ *(substitua pelo seu usuário após o deploy)*
+> **Demonstração:** https://kevendev777.github.io/semear-futuro/
 
 ---
 
@@ -49,7 +49,7 @@ semear-futuro/
 Pré-requisito: [Node.js](https://nodejs.org/) 18 ou superior (para o build). Os ES Modules **não funcionam abrindo o arquivo direto (file://)**; use um servidor local.
 
 ```bash
-git clone https://github.com/SEU-USUARIO/semear-futuro.git
+git clone https://github.com/kevendev777/semear-futuro.git
 cd semear-futuro
 npm install          # instala as ferramentas de build
 npm run dev          # servidor local em http://localhost:5173

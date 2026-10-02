@@ -2,6 +2,10 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [3.0.4] - 2026-10-02
+### Documentação
+- README com o link do site publicado no GitHub Pages e a URL do repositório.
+
 ## [3.0.3] - 2026-10-02
 ### Corrigido
 - Na primeira carga a página rolava até o título e escondia o cabeçalho; o foco só é movido nas trocas de tela.
