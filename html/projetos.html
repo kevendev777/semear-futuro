@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos Sociais | Instituto Semear Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Instituto Semear Futuro: educação, alimentação e cidadania para crianças e famílias em Recife (PE).">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="marca" href="inicio.html">
+        <img src="../imagens/logo.svg" alt="Logotipo do Instituto Semear Futuro: uma muda de planta brotando" width="40" height="40">
+        Semear Futuro
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+          <span class="menu-toggle__barra"></span><span class="menu-toggle__barra"></span><span class="menu-toggle__barra"></span>
+        </button>
+        <ul class="menu__lista" id="menu-principal">
+          <li><a class="menu__link" href="inicio.html">Início</a></li>
+          <li class="menu__item--sub">
+            <a class="menu__link" href="projetos.html" aria-current="page">Projetos Sociais ▾</a>
+            <ul class="submenu" aria-label="Projetos">
+              <li><a href="projetos.html#reforco">Reforço Escolar</a></li>
+              <li><a href="projetos.html#oficinas">Oficinas Culturais</a></li>
+              <li><a href="projetos.html#cozinha">Cozinha Solidária</a></li>
+            </ul>
+          </li>
+          <li><a class="menu__link" href="cadastro.html">Seja Voluntário</a></li>
+          <li><a class="btn btn--secundario" href="cadastro.html">Quero ajudar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="secao" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <h1 id="titulo-projetos">Projetos Sociais</h1>
+        <p>Conheça as frentes de atuação do Instituto Semear Futuro.</p>
+        <div class="grid">
+          <article class="col-12 col-md-6 col-lg-4" id="reforco">
+            <div class="card">
+              <div class="card__imagem"><img src="../imagens/criancas-estudando.svg" alt="Crianças estudando com livros" width="480" height="270"></div>
+              <div class="card__corpo">
+                <div class="card__tags"><span class="badge badge--educacao">Educação</span> <span class="badge badge--urgente">Precisa de voluntários</span></div>
+                <h3>Reforço Escolar</h3>
+                <p>Aulas de português e matemática no contraturno para crianças de 6 a 14 anos.</p>
+              </div>
+              <div class="card__acoes"><a class="btn btn--primario" href="cadastro.html">Saiba mais</a></div>
+            </div>
+          </article>
+          <article class="col-12 col-md-6 col-lg-4" id="oficinas">
+            <div class="card">
+              <div class="card__imagem"><img src="../imagens/oficinas.svg" alt="Ilustração de crianças pintando em uma oficina de artes" width="480" height="270"></div>
+              <div class="card__corpo">
+                <div class="card__tags"><span class="badge badge--cultura">Cultura</span> <span class="badge badge--sucesso">Vagas abertas</span></div>
+                <h3>Oficinas Culturais</h3>
+                <p>Música, artes e leitura para fortalecer a autoestima e a criatividade.</p>
+              </div>
+              <div class="card__acoes"><a class="btn btn--primario" href="cadastro.html">Saiba mais</a></div>
+            </div>
+          </article>
+          <article class="col-12 col-md-6 col-lg-4" id="cozinha">
+            <div class="card">
+              <div class="card__imagem"><img src="../imagens/cozinha.svg" alt="Ilustração de panela e pratos servidos na cozinha solidária" width="480" height="270"></div>
+              <div class="card__corpo">
+                <div class="card__tags"><span class="badge badge--alimentacao">Alimentação</span></div>
+                <h3>Cozinha Solidária</h3>
+                <p>Refeições nutritivas diárias para crianças e famílias atendidas.</p>
+              </div>
+              <div class="card__acoes"><a class="btn btn--primario" href="cadastro.html">Saiba mais</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <aside class="secao secao--alt" aria-labelledby="titulo-parte">
+      <div class="container">
+        <h2 id="titulo-parte">Quer fazer parte?</h2>
+        <p>Doe algumas horas por semana e transforme vidas.</p>
+        <a class="btn btn--secundario" href="cadastro.html">Cadastrar como voluntário</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    <div class="container grid">
+      <section class="col-12 col-md-4" aria-labelledby="rod-contato">
+        <h2 id="rod-contato">Contato</h2>
+        <address>
+          Instituto Semear Futuro<br>
+          Rua das Mangueiras, 120, Recife/PE — CEP 50000-000<br>
+          Telefone: <a href="tel:+5581999990000">(81) 99999-0000</a><br>
+          E-mail: <a href="mailto:contato@semearfuturo.org.br">contato@semearfuturo.org.br</a>
+        </address>
+      </section>
+      <section class="col-12 col-md-4" aria-labelledby="rod-links">
+        <h2 id="rod-links">Navegação</h2>
+        <p><a href="inicio.html">Início</a><br><a href="projetos.html">Projetos Sociais</a><br><a href="cadastro.html">Seja Voluntário</a></p>
+      </section>
+      <section class="col-12 col-md-4" aria-labelledby="rod-transp">
+        <h2 id="rod-transp">Transparência</h2>
+        <p>CNPJ fictício para fins acadêmicos. Relatórios anuais disponíveis mediante solicitação.</p>
+      </section>
+    </div>
+    <ul class="rodape__redes">
+      <li><a href="#" aria-label="Instagram do Instituto">Instagram</a></li>
+      <li><a href="#" aria-label="Facebook do Instituto">Facebook</a></li>
+      <li><a href="#" aria-label="YouTube do Instituto">YouTube</a></li>
+    </ul>
+    <p class="rodape__copy"><small>&copy; 2026 Instituto Semear Futuro.</small></p>
+  </footer>
+  <div class="toast-area" aria-live="polite"></div>
+  <script src="../js/estatico.js"></script>
+</body>
+</html>

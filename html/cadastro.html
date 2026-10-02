@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja Voluntário | Instituto Semear Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Instituto Semear Futuro: educação, alimentação e cidadania para crianças e famílias em Recife (PE).">
+</head>
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a class="marca" href="inicio.html">
+        <img src="../imagens/logo.svg" alt="Logotipo do Instituto Semear Futuro: uma muda de planta brotando" width="40" height="40">
+        Semear Futuro
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+          <span class="menu-toggle__barra"></span><span class="menu-toggle__barra"></span><span class="menu-toggle__barra"></span>
+        </button>
+        <ul class="menu__lista" id="menu-principal">
+          <li><a class="menu__link" href="inicio.html">Início</a></li>
+          <li class="menu__item--sub">
+            <a class="menu__link" href="projetos.html">Projetos Sociais ▾</a>
+            <ul class="submenu" aria-label="Projetos">
+              <li><a href="projetos.html#reforco">Reforço Escolar</a></li>
+              <li><a href="projetos.html#oficinas">Oficinas Culturais</a></li>
+              <li><a href="projetos.html#cozinha">Cozinha Solidária</a></li>
+            </ul>
+          </li>
+          <li><a class="menu__link" href="cadastro.html" aria-current="page">Seja Voluntário</a></li>
+          <li><a class="btn btn--secundario" href="cadastro.html">Quero ajudar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="secao" aria-labelledby="titulo-cadastro">
+      <div class="container grid">
+        <div class="col-12 col-lg-8">
+          <h1 id="titulo-cadastro">Cadastro de Voluntário</h1>
+          <div class="alerta alerta--info" role="note">
+            <span class="alerta__icone" aria-hidden="true">ℹ</span>
+            <div><strong>Antes de começar</strong><p>Campos marcados com * são obrigatórios.</p></div>
+          </div>
+          <form class="form" id="form-cadastro" novalidate>
+            <fieldset>
+              <legend>Dados pessoais</legend>
+              <div class="form__campo">
+                <label class="obrigatorio" for="nome">Nome completo</label>
+                <input class="form__input" type="text" id="nome" name="nome" placeholder=" " required minlength="3" aria-describedby="erro-nome">
+                <span class="form__erro" id="erro-nome">Informe seu nome completo (mínimo 3 letras).</span>
+              </div>
+              <div class="form__linha">
+                <div class="form__campo">
+                  <label class="obrigatorio" for="email">E-mail</label>
+                  <input class="form__input" type="email" id="email" name="email" placeholder=" " required aria-describedby="erro-email">
+                  <span class="form__erro" id="erro-email">Digite um e-mail válido, ex.: nome@email.com</span>
+                </div>
+                <div class="form__campo">
+                  <label class="obrigatorio" for="telefone">Telefone</label>
+                  <input class="form__input" type="tel" id="telefone" name="telefone" placeholder=" " required pattern="\(\d{2}\) \d{4,5}-\d{4}" aria-describedby="ajuda-tel erro-tel">
+                  <span class="form__ajuda" id="ajuda-tel">Formato: (81) 99999-0000</span>
+                  <span class="form__erro" id="erro-tel">Telefone fora do formato (81) 99999-0000.</span>
+                </div>
+              </div>
+              <div class="form__linha">
+                <div class="form__campo">
+                  <label class="obrigatorio" for="cidade">Cidade</label>
+                  <input class="form__input" type="text" id="cidade" name="cidade" placeholder=" " required>
+                </div>
+                <div class="form__campo">
+                  <label class="obrigatorio" for="estado">Estado</label>
+                  <select class="form__input" id="estado" name="estado" required>
+                    <option value="">Selecione</option><option>PE</option><option>PB</option><option>AL</option><option>Outro</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Como deseja ajudar?</legend>
+              <label class="form__opcao"><input type="radio" name="area" value="reforco" checked> Reforço Escolar</label>
+              <label class="form__opcao"><input type="radio" name="area" value="oficinas"> Oficinas Culturais</label>
+              <label class="form__opcao"><input type="radio" name="area" value="cozinha"> Cozinha Solidária</label>
+            </fieldset>
+            <label class="form__opcao"><input type="checkbox" id="termos" required> Li e aceito o termo de voluntariado.</label>
+            <div class="grupo-botoes">
+              <button class="btn btn--primario" type="submit">Enviar cadastro</button>
+              <button class="btn btn--contorno" type="reset">Limpar</button>
+            </div>
+          </form>
+        </div>
+        <aside class="col-12 col-lg-4">
+          <div class="card"><div class="card__corpo">
+            <h2>Por que ser voluntário?</h2>
+            <p>Você compartilha seu conhecimento, cria vínculos e ajuda a mudar a realidade de crianças da comunidade.</p>
+            <div class="card__tags"><span class="badge badge--educacao">Educação</span><span class="badge badge--cultura">Cultura</span><span class="badge badge--alimentacao">Alimentação</span></div>
+          </div></div>
+        </aside>
+      </div>
+    </section>
+    <div class="modal" id="modal-confirmacao" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <div class="modal__caixa">
+        <h2 id="modal-titulo">Cadastro recebido!</h2>
+        <p>Obrigado por querer semear o futuro com a gente. Nossa equipe entrará em contato em até 5 dias úteis.</p>
+        <div class="modal__acoes"><button class="btn btn--primario" type="button" data-fechar>Entendi</button></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container grid">
+      <section class="col-12 col-md-4" aria-labelledby="rod-contato">
+        <h2 id="rod-contato">Contato</h2>
+        <address>
+          Instituto Semear Futuro<br>
+          Rua das Mangueiras, 120, Recife/PE — CEP 50000-000<br>
+          Telefone: <a href="tel:+5581999990000">(81) 99999-0000</a><br>
+          E-mail: <a href="mailto:contato@semearfuturo.org.br">contato@semearfuturo.org.br</a>
+        </address>
+      </section>
+      <section class="col-12 col-md-4" aria-labelledby="rod-links">
+        <h2 id="rod-links">Navegação</h2>
+        <p><a href="inicio.html">Início</a><br><a href="projetos.html">Projetos Sociais</a><br><a href="cadastro.html">Seja Voluntário</a></p>
+      </section>
+      <section class="col-12 col-md-4" aria-labelledby="rod-transp">
+        <h2 id="rod-transp">Transparência</h2>
+        <p>CNPJ fictício para fins acadêmicos. Relatórios anuais disponíveis mediante solicitação.</p>
+      </section>
+    </div>
+    <ul class="rodape__redes">
+      <li><a href="#" aria-label="Instagram do Instituto">Instagram</a></li>
+      <li><a href="#" aria-label="Facebook do Instituto">Facebook</a></li>
+      <li><a href="#" aria-label="YouTube do Instituto">YouTube</a></li>
+    </ul>
+    <p class="rodape__copy"><small>&copy; 2026 Instituto Semear Futuro.</small></p>
+  </footer>
+  <div class="toast-area" aria-live="polite"></div>
+  <script src="../js/estatico.js"></script>
+</body>
+</html>
