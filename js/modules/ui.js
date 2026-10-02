@@ -43,11 +43,14 @@ export function mostrarToast(mensagem, tipo = 'sucesso') {
 }
 
 let ultimoFoco = null;
+const fundo = () => document.querySelectorAll('body > header, body > main, body > footer, .barra-a11y, .pular-link');
+
 export function abrirModal(titulo, texto) {
   const modal = document.getElementById('modal');
   modal.querySelector('#modal-titulo').textContent = titulo;
   modal.querySelector('#modal-texto').textContent = texto;
   ultimoFoco = document.activeElement;
+  fundo().forEach((el) => { el.inert = true; }); // conteúdo de trás fica inacessível ao teclado/leitor
   modal.classList.add('modal--aberto');
   modal.querySelector('[data-fechar]').focus();
 }
@@ -56,8 +59,19 @@ export function iniciarModal() {
   const modal = document.getElementById('modal');
   const fechar = () => {
     modal.classList.remove('modal--aberto');
+    fundo().forEach((el) => { el.inert = false; });
     if (ultimoFoco) ultimoFoco.focus(); // devolve o foco para onde o usuário estava
   };
+
+  // Mantém o Tab circulando apenas dentro do modal (focus trap)
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const focaveis = [...modal.querySelectorAll('button, [href], input, select, textarea')];
+    const primeiro = focaveis[0];
+    const ultimo = focaveis[focaveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+    else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+  });
   modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target.closest('[data-fechar]')) fechar();
   });
